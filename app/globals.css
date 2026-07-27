@@ -1,22 +1,167 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-inter);
+@theme {
+  /* Typography */
+  --font-sans: var(--font-family-sans);
+  --font-heading: var(--font-family-heading);
+
+  /* Colors */
+  --color-background: var(--color-bg-primary);
+  --color-surface: var(--color-bg-surface);
+  
+  --color-primary: var(--color-text-primary);
+  --color-secondary: var(--color-text-secondary);
+  --color-muted: var(--color-text-muted);
+  
+  --color-brand-azure: var(--color-brand-azure);
+  --color-brand-ultra: var(--color-brand-ultra);
+  
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-hover: var(--color-border-hover);
+
+  /* Spacing */
+  --spacing-2xs: var(--spacing-2xs);
+  --spacing-xs: var(--spacing-xs);
+  --spacing-sm: var(--spacing-sm);
+  --spacing-md: var(--spacing-md);
+  --spacing-lg: var(--spacing-lg);
+  --spacing-xl: var(--spacing-xl);
+  --spacing-2xl: var(--spacing-2xl);
+  --spacing-3xl: var(--spacing-3xl);
+
+  /* Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-full: var(--radius-full);
+
+  /* Blur */
+  --blur-xs: var(--blur-xs);
+  --blur-sm: var(--blur-sm);
+  --blur-md: var(--blur-md);
+  --blur-lg: var(--blur-lg);
+  --blur-xl: var(--blur-xl);
+
+  /* Containers */
+  --container-reading: var(--container-reading);
+  --container-content: var(--container-content);
+  --container-standard: var(--container-standard);
+  --container-wide: var(--container-wide);
+  --container-full: var(--container-full);
+
+  /* Z-Index */
+  --z-base: var(--z-base);
+  --z-sticky: var(--z-sticky);
+  --z-nav: var(--z-nav);
+  --z-dropdown: var(--z-dropdown);
+  --z-overlay: var(--z-overlay);
+  --z-modal: var(--z-modal);
+  --z-toast: var(--z-toast);
+  --z-tooltip: var(--z-tooltip);
+
+  /* Opacity */
+  --opacity-5: var(--opacity-5);
+  --opacity-10: var(--opacity-10);
+  --opacity-20: var(--opacity-20);
+  --opacity-40: var(--opacity-40);
+  --opacity-60: var(--opacity-60);
+  --opacity-80: var(--opacity-80);
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #000000;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #000000;
-    --foreground: #ffffff;
+    /* The Void (Backgrounds) */
+    --color-bg-primary: #030303;
+    --color-bg-surface: rgba(255, 255, 255, 0.03);
+    
+    /* Typography */
+    --font-family-sans: var(--font-inter), sans-serif;
+    --font-family-heading: var(--font-outfit), sans-serif;
+    --color-text-primary: #F4F4F5;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #52525B;
+    
+    /* Brand Accent Colors */
+    --color-brand-azure: #60A5FA;
+    --color-brand-ultra: #C084FC;
+    
+    /* Borders */
+    --color-border-subtle: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 255, 255, 0.2);
+
+    /* Opacity */
+    --opacity-5: 0.05;
+    --opacity-10: 0.10;
+    --opacity-20: 0.20;
+    --opacity-40: 0.40;
+    --opacity-60: 0.60;
+    --opacity-80: 0.80;
+
+    /* Blur */
+    --blur-xs: 4px;
+    --blur-sm: 8px;
+    --blur-md: 12px;
+    --blur-lg: 24px;
+    --blur-xl: 40px;
+
+    /* Transition Durations */
+    --duration-instant: 75ms;
+    --duration-fast: 150ms;
+    --duration-standard: 300ms;
+    --duration-slow: 500ms;
+    --duration-cinematic: 1000ms;
+
+    /* Spacing */
+    --spacing-2xs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --spacing-2xl: 8rem;
+    --spacing-3xl: 15rem;
+
+    /* Container Widths */
+    --container-reading: 65ch;
+    --container-content: 800px;
+    --container-standard: 1200px;
+    --container-wide: 1440px;
+    --container-full: 100%;
+
+    /* Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* Z-Index Layering */
+    --z-base: 0;
+    --z-sticky: 10;
+    --z-nav: 40;
+    --z-dropdown: 50;
+    --z-overlay: 90;
+    --z-modal: 100;
+    --z-toast: 110;
+    --z-tooltip: 120;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
+@layer utilities {
+  .text-gradient-glow {
+    background: linear-gradient(135deg, var(--color-brand-azure), var(--color-brand-ultra));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-glow {
+    background: linear-gradient(135deg, var(--color-brand-azure), var(--color-brand-ultra));
+  }
 }
