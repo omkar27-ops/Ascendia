@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-
+import { Navbar } from "@/components/navigation/Navbar";
+import { Footer } from "@/components/navigation/Footer";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -25,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable} antialiased dark`}>
       <body className="min-h-screen flex flex-col font-sans bg-background text-primary selection:bg-brand-azure/30 selection:text-white">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
