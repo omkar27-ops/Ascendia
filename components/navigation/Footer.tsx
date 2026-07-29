@@ -37,8 +37,7 @@ export function Footer() {
           {/* Brand & Newsletter Column */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             <a href="/" className="flex items-center gap-2 text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-azure rounded-md w-fit" aria-label="Ascendia Home">
-              <AscendiaLogo className="h-8 w-8 text-brand-azure" />
-              <span className="font-heading font-semibold text-2xl tracking-tight">Ascendia</span>
+              <AscendiaLogo className="h-14 w-auto rounded-md" />
             </a>
             <p className="text-secondary max-w-sm font-sans leading-relaxed">
               Elevating brands through atmospheric design and cinematic digital experiences.

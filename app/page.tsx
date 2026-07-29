@@ -15,25 +15,36 @@ export default function Home() {
     <main className="flex-grow flex flex-col w-full overflow-hidden">
       
       {/* 1. Hero Section */}
-      <section id="hero" className="relative min-h-[90vh] flex flex-col justify-center pt-20 pb-32">
-        {/* Background elements for cinematic feel */}
+      <section id="hero" className="relative min-h-[100svh] flex flex-col justify-center pt-32 pb-40 overflow-hidden">
+        {/* Immersive Cinematic Background */}
         <div className="absolute inset-0 z-0 bg-[var(--color-bg-primary)] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[80vw] max-w-3xl aspect-square rounded-full bg-gradient-glow opacity-[var(--opacity-10)] blur-[var(--blur-xl)] pointer-events-none" />
         
-        <Container className="relative z-10 flex flex-col items-center text-center gap-8 md:gap-12">
-          <div className="flex flex-col gap-6 max-w-4xl">
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-primary leading-[1.1]">
-              Elevate Your Brand to <span className="text-gradient-glow">Atmospheric</span> Heights
+        {/* Core Radial Glow for depth */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[120vw] sm:w-[80vw] max-w-[1200px] aspect-[2/1] rounded-[100%] bg-gradient-glow opacity-[var(--opacity-10)] sm:opacity-[var(--opacity-20)] blur-[100px] sm:blur-[140px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[var(--color-brand-azure)] opacity-[var(--opacity-5)] blur-[100px] pointer-events-none" />
+        
+        <Container className="relative z-10 flex flex-col items-center text-center">
+          <div className="flex flex-col items-center gap-8 md:gap-10 w-full max-w-[1000px]">
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-medium tracking-tighter text-primary leading-[1.05] drop-shadow-sm">
+              Elevate Your Brand to<br className="hidden sm:block" /> <span className="text-gradient-glow font-semibold relative inline-block">Atmospheric<div className="absolute -inset-2 bg-gradient-glow blur-2xl opacity-[var(--opacity-20)] -z-10 rounded-full pointer-events-none" /></span> Heights
             </h1>
-            <p className="font-sans text-lg md:text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
+            <p className="font-sans text-lg sm:text-xl lg:text-2xl text-secondary w-full max-w-[700px] mx-auto leading-[1.6] tracking-tight font-light">
               We are a premium digital marketing and creative growth agency engineering cinematic web experiences and scalable brand architectures.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 w-full sm:w-auto">
-            <Button variant="primary" size="lg" className="w-full sm:w-auto">
+          
+          {/* Premium CTA Group */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6 mt-12 md:mt-16 w-full sm:w-auto">
+            <Button 
+              variant="primary" 
+              className="w-full sm:w-auto h-12 lg:h-14 px-8 lg:px-10 text-base lg:text-lg font-medium rounded-full shadow-[0_0_40px_-10px_rgba(96,165,250,0.3)] hover:shadow-[0_0_80px_-15px_rgba(192,132,252,0.5)] transition-all duration-[700ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:-translate-y-1 hover:scale-[1.03] ring-1 ring-white/10"
+            >
               Explore Our Work
             </Button>
-            <Button variant="ghost" size="lg" className="w-full sm:w-auto border border-transparent hover:border-[var(--color-border-hover)]">
+            <Button 
+              variant="ghost" 
+              className="w-full sm:w-auto h-12 lg:h-14 px-8 lg:px-10 text-base lg:text-lg font-medium rounded-full border border-[var(--color-border-subtle)] bg-[var(--color-bg-surface)] backdrop-blur-md hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-[700ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:-translate-y-1"
+            >
               Our Philosophy
             </Button>
           </div>

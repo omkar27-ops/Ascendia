@@ -22,10 +22,7 @@ export function Navbar() {
             className="flex items-center gap-2 group transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-azure rounded-md"
             aria-label="Ascendia Home"
           >
-            <AscendiaLogo className="h-6 w-6 text-brand-azure group-hover:text-brand-ultra transition-colors duration-[var(--duration-slow)]" />
-            <span className="font-heading font-semibold text-xl tracking-tight text-primary">
-              Ascendia
-            </span>
+            <AscendiaLogo className="h-10 sm:h-12 w-auto transition-all duration-[var(--duration-slow)] rounded-sm" />
           </a>
 
           {/* Desktop Navigation */}

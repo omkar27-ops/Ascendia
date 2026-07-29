@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 export function AscendiaLogo({ className, ...props }: React.ComponentProps<"img">) {
   return (
     <img
-      src="/logo.svg"
+      src="/Logo.png?v=3"
       alt="Ascendia Logo"
-      className={cn("h-8 w-auto object-contain", className)}
+      className={cn("h-10 w-auto object-contain", className)}
       {...props}
     />
   );
