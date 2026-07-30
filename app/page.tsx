@@ -29,7 +29,7 @@ export default function Home() {
               Elevate Your Brand to<br className="hidden sm:block" /> <span className="text-gradient-glow font-semibold relative inline-block">Atmospheric<div className="absolute -inset-2 bg-gradient-glow blur-2xl opacity-[var(--opacity-20)] -z-10 rounded-full pointer-events-none" /></span> Heights
             </h1>
             <p className="font-sans text-lg sm:text-xl lg:text-2xl text-secondary w-full max-w-[700px] mx-auto leading-[1.6] tracking-tight font-light">
-              We are a premium digital marketing and creative growth agency engineering cinematic web experiences and scalable brand architectures.
+              From scroll-stopping social media to high-converting websites, we create digital experiences that drive measurable business growth.
             </p>
           </div>
           

@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} antialiased dark`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable} antialiased dark`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col font-sans bg-background text-primary selection:bg-brand-azure/30 selection:text-white">
         <Navbar />
         {children}
