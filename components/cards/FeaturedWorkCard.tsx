@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ParallaxImage } from "@/components/animation/ParallaxImage";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 
@@ -29,11 +30,10 @@ export function FeaturedWorkCard({
     >
       {/* Image Container with Cinematic Zoom */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-[var(--color-bg-primary)]">
-        <img
+        <ParallaxImage
           src={imageSrc}
           alt={imageAlt}
-          className="h-full w-full object-cover transition-transform duration-[var(--duration-cinematic)] ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-105 group-focus-visible:scale-105 motion-reduce:transition-none"
-          loading="lazy"
+          imageClassName="transition-transform duration-[var(--duration-cinematic)] ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-105 group-focus-visible:scale-105 motion-reduce:transition-none"
         />
         {/* Overlay gradient for readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)]/90 via-[var(--color-bg-primary)]/20 to-transparent opacity-80 transition-opacity duration-[var(--duration-standard)] group-hover:opacity-60" />
