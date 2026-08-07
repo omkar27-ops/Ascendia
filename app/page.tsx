@@ -17,7 +17,18 @@ export default function Home() {
       {/* 1. Hero Section */}
       <section id="hero" className="relative min-h-[100svh] flex flex-col justify-center pt-32 pb-40 overflow-hidden">
         {/* Immersive Cinematic Background */}
-        <div className="absolute inset-0 z-0 bg-[var(--color-bg-primary)] pointer-events-none" />
+        <div className="absolute inset-0 z-0 bg-[var(--color-bg-primary)] pointer-events-none overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="w-full h-full object-cover opacity-40 mix-blend-screen"
+          >
+            <source src="/Cinematic_website_scroll_impleme._202608021720.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--color-bg-primary)]/50 to-[var(--color-bg-primary)]" />
+        </div>
         
         {/* Core Radial Glow for depth */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[120vw] sm:w-[80vw] max-w-[1200px] aspect-[2/1] rounded-[100%] bg-gradient-glow opacity-[var(--opacity-10)] sm:opacity-[var(--opacity-20)] blur-[100px] sm:blur-[140px] pointer-events-none" />
